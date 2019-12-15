@@ -15,6 +15,7 @@ const pusher = new Pusher({
 
 const allowCrossDomain = (req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*'); // for POST route - incoming remote resources
+  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
   res.header(
     'Access-Control-Allow-Headers',
     'Origin, X-Requested-With, Content-Type, Accept'
